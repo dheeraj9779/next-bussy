@@ -5,49 +5,49 @@ import { StartupCards } from "@/components/StartupCards";
 export default async function Home({searchParams}: {searchParams: Promise<{query ?: string}>}) {
     const query = (await searchParams).query;
     const posts = [{
-        _createdAt: '',
-        views: 55,
-        author: {_id:1},
+        _createdAt: new Date(),
+        views: 15,
+        author: {_id:1,name: 'Joe'},
         _id: 1,
-        description: 'My Description',
+        description: 'My Robots Description my robots description  my robots description  my robots description  my robots description ',
         image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvYm90aWNzfGVufDB8fDB8fHww',
         category: 'Robots',
         title: 'The robots'
     },
     {
-        _createdAt: '',
-        views: 55,
-        author: {_id:1},
-        _id: 1,
-        description: 'My Description',
+        _createdAt: new Date(),
+        views: 25,
+        author: {_id:2,name: 'rose'},
+        _id: 2,
+        description: 'My Toys Description',
         image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvYm90aWNzfGVufDB8fDB8fHww',
         category: 'Toys',
-        title: 'The robots'
+        title: 'The Toys'
     },
     {
-        _createdAt: '',
-        views: 55,
-        author: {_id:1},
-        _id: 1,
-        description: 'My Description',
+        _createdAt: new Date(),
+        views: 35,
+        author: {_id:3,name: 'monica'},
+        _id: 3,
+        description: 'My Cars Description',
         image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvYm90aWNzfGVufDB8fDB8fHww',
         category: 'Cars',
-        title: 'The robots'
+        title: 'The Cars'
     },
     {
-        _createdAt: '',
-        views: 55,
-        author: {_id:1},
-        _id: 1,
-        description: 'My Description',
+        _createdAt: new Date(),
+        views: 45,
+        author: {_id:4,name: 'chandler'},
+        _id: 4,
+        description: 'My Dolls Description',
         image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvYm90aWNzfGVufDB8fDB8fHww',
         category: 'Dolls',
-        title: 'The robots'
+        title: 'The Dolls'
     }
 ]
   return (
     <>
-    <section className="yellow-container  min-h-[530px] bg-blue-600 flex_center flex-col">
+    <section className="pattern  min-h-[500px] bg-blue-600 flex_center flex-col">
         <div className="text-[36px] heady">Pitch your startup, <br/>Connect with us</div>
         <p className="!max-w-3xl my-3 font-medium text-[20px] text-white max-w-2xl text-center break-words">Create ideas and showcase it to the world!</p>
         <Searchform query={query}/>
@@ -63,7 +63,6 @@ export default async function Home({searchParams}: {searchParams: Promise<{query
                 posts.length > 0 ?  
                     (
                         posts.map((post) => 
-                            // <li key={post?._id}>{post?.title}</li>
                             <StartupCards key={post?._id} post={post}/>
                         )
                     ):
