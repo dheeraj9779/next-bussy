@@ -71,6 +71,11 @@
     @apply w-full h-96 rounded-[22px] bg-zinc-400;
   }
 
+    .tag{
+  @apply bg-secondary px-6 py-3  font-bold rounded-sm uppercase relative;
+}
+
+
 body {
   /* font-family: var(--font-exo), Helvetica, sans-serif; */
 }
@@ -162,5 +167,6 @@ body {
     background-repeat: repeat-x;
     background-size: 7% 100%;
   }
+
 
 }

@@ -12,7 +12,7 @@ export const SearchFormReset = () => {
     }
     return (
         <button type='reset' onClick={reset}>
-            <Link href="/" className="search-btn"><X/></Link>
+            <Link href="/dashboard" className="search-btn"><X/></Link>
         </button>
     )
      

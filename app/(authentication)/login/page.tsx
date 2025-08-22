@@ -11,16 +11,18 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 
+
 export default function login() {
     const [loading, setLoading] = useState(false)
     async function handleSocialLogin() {
         setLoading(true)
         await signIn('github', { callbackUrl: '/dashboard' })
     }
+      
     return (
         <div className="h-screen w-full flex">
             <section className="img-sec w-1/2">
-                <Image src="/back.jpeg" alt="bck" fill    style={{ objectFit: 'cover' }}/>
+                {/* <Image src="/back.jpeg" alt="bck" fill    style={{ objectFit: 'cover' }}/> */}
             </section>
             <section className="form-sec w-1/2 flex justify-center items-center text-white flex-col space-y-4">
                 <form className="w-full max-w-lg space-y-6">
@@ -40,7 +42,7 @@ export default function login() {
                         </div>
                     </motion.div>
                 </form>
-                <div className="w-full max-w-lg "><p>Create an account &nbsp;<Link href="/signup">Signup</Link></p></div>
+                <div className="w-full max-w-lg "><p>Create an account? &nbsp;<Link href="/signup">Signup</Link></p></div>
 
                 <div className="flex w-full max-w-lg items-center justify-between gap-3">
                     <motion.div className=" flex-1"
@@ -57,6 +59,9 @@ export default function login() {
                             <Image src="/google_login.png" alt="logo" width={24} height={24} />Google
                         </Button>
                     </motion.div>
+                </div>
+                 <div>
+                 
                 </div>
             </section>
         </div>
